@@ -6,6 +6,19 @@ function getAssets() {
     .then((resp) => resp.data)
 }
 
+function getAsset(coin) {
+  return fetch(`${url}/assets/${coin}`)
+    .then((res) => res.json())
+    .then((resp) => resp.data)
+}
+function getAssetHistory(coin) {
+  return fetch(`${url}/assets/${coin}`)
+    .then((res) => res.json())
+    .then((resp) => resp.data)
+}
+
 export default {
   getAssets,
+  getAsset,
+  getAssetHistory,
 }
